@@ -349,40 +349,29 @@ ul {
     to { transform: rotate(360deg); }
 }
 
-.hero-image-wrapper {
+.tech-icons {
     position: relative;
-    width: 280px;
-    height: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 250px;
+    height: 250px;
     z-index: 2;
 }
 
-.hero-profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--glass-border);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-    z-index: 2;
-}
-
-.hero-spin-ring {
+.floating {
     position: absolute;
-    width: 108%;
-    height: 108%;
-    border-radius: 50%;
-    border: 2px dashed var(--accent-blue);
-    animation: rotateRing 15s linear infinite;
-    z-index: 1;
-    opacity: 0.7;
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+    animation: float 4s ease-in-out infinite;
 }
 
-@keyframes rotateRing {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.fa-aws { top: 0; left: 50%; transform: translateX(-50%); color: #FF9900; filter: drop-shadow(0 0 15px rgba(255,153,0,0.4));}
+.fa-html5 { bottom: 20%; right: 0; color: #E34F26; }
+.fa-js { bottom: 20%; left: 0; color: #F7DF1E; }
+.fa-database { top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--accent-blue); font-size: 5rem; filter: drop-shadow(0 0 20px var(--glow-blue)); }
+
+@keyframes float {
+    0%, 100% { margin-top: 0; }
+    50% { margin-top: -15px; }
 }
 
 .scroll-indicator {
@@ -501,6 +490,17 @@ ul {
 @keyframes bookHover {
     0%, 100% { transform: perspective(200px) rotateX(0deg) scale(1); filter: drop-shadow(0 0 5px var(--glow-blue)); }
     50% { transform: perspective(200px) rotateX(15deg) scale(1.1); filter: drop-shadow(0 0 15px var(--glow-blue)); }
+}
+
+.icon-game i {
+    animation: gameBounce 2s ease-in-out infinite;
+}
+
+@keyframes gameBounce {
+    0%, 100% { transform: scale(1) rotate(0deg); color: var(--accent-blue); filter: drop-shadow(0 0 5px var(--glow-blue)); }
+    25% { transform: scale(1.15) rotate(-10deg); color: var(--accent-orange); filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.5)); }
+    50% { transform: scale(1) rotate(0deg); color: var(--accent-blue); filter: drop-shadow(0 0 5px var(--glow-blue)); }
+    75% { transform: scale(1.15) rotate(10deg); color: var(--accent-orange); filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.5)); }
 }
 
 /* Skills Section */
