@@ -296,6 +296,7 @@ ul {
     margin-bottom: 1rem;
     background: linear-gradient(to right, #ffffff, #94a3b8);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -325,6 +326,18 @@ ul {
     justify-content: center;
     align-items: center;
 }
+
+.profile-img {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 2;
+    border: 4px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
 
 .blob-shape {
     position: absolute;
