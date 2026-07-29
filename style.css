@@ -317,6 +317,7 @@ ul {
 .cta-group {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .hero-visual {
